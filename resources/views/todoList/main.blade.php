@@ -93,9 +93,9 @@
 </head>
 <body>
   <nav id="nav">
-    <a href="/" class="{{$active_todos ?? ''}}">Todos</a>&MediumSpace;
-    <a href="/markeds" class="{{$active_markeds ?? ''}}">Markeds</a>&MediumSpace;
-    <a href="/new"  class="{{$active_new ?? ''}}">New</a>
+    <a href="{{ route('home') }}" class="{{$active_todos ?? ''}}">Todos</a>&MediumSpace;
+    <a href="{{ route('markeds') }}" class="{{$active_markeds ?? ''}}">Markeds</a>&MediumSpace;
+    <a href="{{ route('newTodo') }}"  class="{{$active_new ?? ''}}">New</a>
   </nav>
   <main id="main">
     @yield('content')

@@ -14,17 +14,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [TodoList::class,'home']);
+Route::get('/', [TodoList::class,'home'])->name('home');
 
-Route::get('/new', [TodoList::class,'new']);
+Route::get('/new', [TodoList::class,'new'])->name('newTodo');
 
-Route::post('/new', [TodoList::class,'store']);
+Route::post('/new', [TodoList::class,'store'])->name('new');
 
-Route::get('/markeds', [TodoList::class,'markeds']);
+Route::get('/markeds', [TodoList::class,'markeds'])->name('markeds');
 
-Route::get('/mark/{todo}', [TodoList::class,'mark'])->whereNumber('todo');
+Route::get('/mark/{todo}', [TodoList::class,'mark'])->whereNumber('todo')->name('mark');
 
-Route::get('/unmark/{todo}', [TodoList::class,'unmark'])->whereNumber('todo');
+Route::get('/unmark/{todo}', [TodoList::class,'unmark'])->whereNumber('todo')->name('unmark');
 
-Route::get('/delete/{todo}', [TodoList::class,'delete'])->whereNumber('todo');
+Route::get('/delete/{todo}', [TodoList::class,'delete'])->whereNumber('todo')->name('delete');
 

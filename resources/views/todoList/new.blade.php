@@ -9,7 +9,7 @@
     @include('todoList.errors')
     @include('todoList.messages')
 
-    {!! Form::open(['url' => '/new']) !!}
+    {!! Form::open(['path' => url('new')]) !!}
       {{ Form::token() }}
       <div class="mb-3">
         {{Form::label('title', 'Title', ['class' => 'form-label'])}}

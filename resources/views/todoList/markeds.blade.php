@@ -8,8 +8,8 @@
       <h4>
         {{$todo->title}} &MediumSpace;
         <small>
-          <a class="btn" href="/unmark/{{$todo->id}}">Unmark this &lArr;</a> &MediumSpace;
-          <a class="btn" href="/delete/{{$todo->id}}">Delete &#x2715;</a>
+          <a class="btn" href="{{ route('unmark',['todo' => $todo->id]) }}">Unmark this &lArr;</a> &MediumSpace;
+          <a class="btn" href="{{ route('delete',['todo' => $todo->id]) }}">Delete &#x2715;</a>
         </small>
       </h4>
       <p>
